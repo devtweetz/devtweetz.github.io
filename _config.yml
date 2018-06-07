@@ -2,14 +2,12 @@
 #
 
 # Site settings
-title: Spectral
+title: Dev Tweets
 description: |
-  Another fine responsive  
-  site template freebie  
-  crafted by [HTML5 UP](http://html5up.net)
-owner: Your Name # or company name
-first_published: 2016 # if migrating another site, the year of your first publish
-email: your-email@domain.com
+  Who does Dev tweet like the most?
+owner: Devin & Michael # or company name
+first_published: 2018 # if migrating another site, the year of your first publish
+email: 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 social:
