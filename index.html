@@ -67,7 +67,10 @@ layout: landing
         // Set chart options
         var options = {'title':'How Much Pizza I Ate Last Night',
                        'width':600,
-                       'height':500};
+                       'height':500
+		       'backgroundColor': 'transparent'
+		       'is3D':true
+		      };
 
         // Instantiate and draw our chart, passing in some options.
         var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
