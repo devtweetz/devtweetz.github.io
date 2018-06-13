@@ -73,8 +73,7 @@
 					resetScroll: true,
 					resetForms: true,
 					side: 'right',
-					target: $body,
-					visibleClass: 'is-menu-visible'
+					target: $body
 				});
 
 		// Header.
