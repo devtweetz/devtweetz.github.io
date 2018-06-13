@@ -94,7 +94,7 @@ layout: landing
         // Instantiate and draw our chart, passing in some options.
 	
         $(window).scroll(function() {
-    if (isScrolledIntoView('#chart_div')) {
+    if (isScrolledIntoView('chart_div')) {
         if (inView) { return; }
         inView = true;
         var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
