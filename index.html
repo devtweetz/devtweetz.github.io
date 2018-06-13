@@ -52,9 +52,9 @@ layout: landing
 					</section>
 					<html>
   <head>
-  <title>Static example</title>
-    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
-    <script>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
       google.load("visualization", "1", {packages:["table"]});
       google.setOnLoadCallback(drawTable);
       function drawTable() {
@@ -84,11 +84,10 @@ jscode_data.setCell(3, 2, true);
       }
     </script>
   </head>
+
   <body>
-    <H1>Table created using ToJSCode</H1>
-    <div id="table_div_jscode"></div>
-    <H1>Table created using ToJSon</H1>
-    <div id="table_div_json"></div>
+    <!--Div that will hold the pie chart-->
+    <div id="chart_div"></div>
   </body>
 </html>
 						
