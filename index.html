@@ -65,11 +65,14 @@ layout: landing
         ]);
 
         // Set chart options
-        var options = {'title':'How Much Pizza I Ate Last Night',
+        var options = {'title':'Who does Devin tweet like the most?',
                        'width':600,
                        'height':500,
 		       'backgroundColor': 'transparent',
-		       'is3D':true
+		       'is3D':true,
+		             animation:{
+        			startup:true
+     			     },
 		      };
 
         // Instantiate and draw our chart, passing in some options.
