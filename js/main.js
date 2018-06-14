@@ -61,29 +61,6 @@
 					speed: 1500,
 					offset: $header.outerHeight()
 				});
-		// Animations
-		var inView = false;
-
-		function isScrolledIntoView(elem)
-		{
-		    var docViewTop = $(window).scrollTop();
-		    var docViewBottom = docViewTop + $(window).height();
-
-		    var elemTop = $(elem).offset().top;
-		    var elemBottom = elemTop + $(elem).height();
-
-		    return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop));
-		}
-		
-		$(window).scroll(function() {
-		    if (isScrolledIntoView('#canvas')) {
-			if (inView) { return; }
-			inView = true;
-			new Chart(document.getElementById("canvas").getContext("2d")).Pie(data);
-		    } else {
-			inView = false;  
-		    }
-		});
 
 		// Menu.
 			$('#menu')
