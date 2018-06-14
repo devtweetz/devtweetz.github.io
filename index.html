@@ -140,7 +140,7 @@ layout: landing
 								  var middle = bounds.top + (bounds.height / 2)
 								  var middleInViewport = middle > 0 && middle < viewportHeight;
 								  if (middleInViewport) {
-								    chart.draw(data, options);
+								    //chart.draw(data, options);
 								    graphContainer.className = 'graph-container graph-container-visible';
 								  } else {
 								    // graphContainer.className = 'graph-container';
@@ -152,7 +152,7 @@ layout: landing
 								// Instantiate and draw our chart, passing in some options.
 								//var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
 
-								//chart.draw(data, options);
+								chart.draw(data, options);
 							      }
 								  </script>
 							  </head>
