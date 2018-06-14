@@ -1,44 +1,8 @@
 ---
 layout: landing
 ---
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<h2>{{ site.title }}</h2>
-							<p>{{ site.description | markdownify }}</p>
-						</div>
-						<a href="#one" class="more scrolly">Check out the stats!</a>
-					</section>
-
-				<!-- One -->
-					<section id="one" class="wrapper style1 special">
-						<div class="inner">
-							<div class="graph-container>
-							<header class="major">
-								<h2>Introduction</h2>
-								<p>Devin has ~7,000 tweets from 2012 - 2018 (6 years). This project analyzes all ~7,000 tweets, removing retweets and replies. 
-								The tweets are split into a bag of words where a term frequency analysis is performed to find Devin's top words.
-								The same analysis is performed on 10 other Twitter users.
-								We train a model to predict the user that Devin tweets most similar to in order to detect whether this can predict similar goals, aspirations, interests, etc.
-								We also perform a Digram Markov Chain on Devin's tweets in order to predict future tweets.</p>
-									     </header> </div>
-							<ul class="icons major">
-								<li><span class="icon fa-twitter major style1"><span class="label">Twitter</span></span></li>
-								<li><span class="icon fa-link major style2"><span class="label">Markov</span></span></li>
-								<li><span class="icon fa-code major style3"><span class="label">Python</span></span></li>
-							</ul>
-						</div>
-					
-					</section>
-
-				<!-- Two -->
-					<section id="two" class="wrapper alt style2">
-						<header class="major">
-							<div class="inner">
-								<center><h2>Tweet Language Comparison</h2></center>
-								<p>
-							<html>
-							  <head>
+								<html>
+								  <head>
 								<style>
 								      body {
 									margin: 16px;
@@ -74,6 +38,46 @@ layout: landing
 									}
 								      }
 								    </style>
+ 									 </head>
+									</html>
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<h2>{{ site.title }}</h2>
+							<p>{{ site.description | markdownify }}</p>
+						</div>
+						<a href="#one" class="more scrolly">Check out the stats!</a>
+					</section>
+
+				<!-- One -->
+					<section id="one" class="wrapper style1 special">
+						<div class="inner">
+							<div class="graph-container">
+							<header class="major">
+								<h2>Introduction</h2>
+								<p>Devin has ~7,000 tweets from 2012 - 2018 (6 years). This project analyzes all ~7,000 tweets, removing retweets and replies. 
+								The tweets are split into a bag of words where a term frequency analysis is performed to find Devin's top words.
+								The same analysis is performed on 10 other Twitter users.
+								We train a model to predict the user that Devin tweets most similar to in order to detect whether this can predict similar goals, aspirations, interests, etc.
+								We also perform a Digram Markov Chain on Devin's tweets in order to predict future tweets.</p>
+								</header></div>
+							<ul class="icons major">
+								<li><span class="icon fa-twitter major style1"><span class="label">Twitter</span></span></li>
+								<li><span class="icon fa-link major style2"><span class="label">Markov</span></span></li>
+								<li><span class="icon fa-code major style3"><span class="label">Python</span></span></li>
+							</ul>
+						</div>
+					
+					</section>
+
+				<!-- Two -->
+					<section id="two" class="wrapper alt style2">
+						<header class="major">
+							<div class="inner">
+								<center><h2>Tweet Language Comparison</h2></center>
+								<p>
+							<html>
+							  <head>
 							    <!--Load the AJAX API-->
 							    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 							    <script type="text/javascript">
