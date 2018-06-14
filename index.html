@@ -41,11 +41,16 @@ layout: landing
     <!--Load the AJAX API-->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="jquery-3.3.1.min.js"></script>
+    <script src="ScrollTrigger.min.js"></script>
+
     <script type="text/javascript">
 	 
 	    
 	var inView = false;
 
+	document.addEventListener('DOMContentLoaded', function(){
+ 	 ScrollTrigger.init();
+	});
 
       // Load the Visualization API and the corechart package.
       google.charts.load('current', {'packages':['corechart']});
@@ -103,31 +108,7 @@ layout: landing
 		      };
 
         // Instantiate and draw our chart, passing in some options.
-	//var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
-	  </script>
-<script>
-	function isScrolledIntoView(elem)
-	{
-    		var docViewTop = $(window).scrollTop();
-    		var docViewBottom = docViewTop + $(window).height();
-
-    		var elemTop = $(elem).offset().top;
-    		var elemBottom = elemTop + $(elem).height();
-
-    		return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop));
-	}
-	
-	  $(window).scroll(function() {
-    	if (isScrolledIntoView('#chart_div')) {
-        	if (inView) { return; }
-        	inView = true;
-        	var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
-    	} else {
-        	inView = false;  
-    	}
-	});
-	  </script>
-<script type="text/javascript">
+	var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
 	      
 	chart.draw(data, options);
       }
@@ -136,7 +117,7 @@ layout: landing
 
   <body>
     <!--Div that will hold the pie chart-->
-    <div id="chart_div"></div>
+    <div id="chart_div" data-scroll="200 animateIn animateOut addHeight once"></div>
   </body>
 </html>
 							</p>
