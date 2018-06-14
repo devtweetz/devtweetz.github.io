@@ -49,8 +49,20 @@ layout: landing
 	var inView = false;
 
 	document.addEventListener('DOMContentLoaded', function(){
- 	 ScrollTrigger.init();
+	  var trigger = new ScrollTrigger({
+	    toggle: {
+	      visible: 'visibleClass',
+	      hidden: 'hiddenClass'
+	    },
+	    offset: {
+	      x: 0,
+	      y: 20
+	    },
+	    addHeight: true,
+	    once: true
+	  }, document.body, window);
 	});
+
 
       // Load the Visualization API and the corechart package.
       google.charts.load('current', {'packages':['corechart']});
@@ -117,9 +129,7 @@ layout: landing
 
   <body>
     <!--Div that will hold the pie chart-->
-<div data-scroll="200 animateIn animateOut addHeight once">
-	<div id="chart_div"></div>
-</div>
+	<div id="chart_div" data-scroll="200 animateIn animateOut addHeight once"></div>
   </body>
 </html>
 							</p>
