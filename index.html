@@ -46,9 +46,8 @@ layout: landing
 									margin: 16px;
 									padding: 0;
 									border: 0;
-									width: 200px;
-									height: 200px;
-									background-color: #cc6666;
+									width: 1000px;
+									height: 400px;
 								      }
 								      .graph-container-visible {
 									background-color: #b5bd68 !important;
@@ -135,7 +134,7 @@ layout: landing
 									      };
 
 								// Instantiate and draw our chart, passing in some options.
-								var chart = new google.visualization.ColumnChart(document.getElementById('graph-0'));
+								var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
 
 								chart.draw(data, options);
 							      }
@@ -144,7 +143,7 @@ layout: landing
 
 							  <body>
 							    <!--Div that will hold the bar chart-->
-								 <div id="graph-0" class="graph-container"></div>
+								 <div id="chart_div" class="graph-container"></div>
    								 <div id="graph-1" class="graph-container"></div>
 							  </body>
 							</html>
