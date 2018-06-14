@@ -28,7 +28,7 @@ layout: landing
 									border: 0;
 									width: 1000px;
 									height: 400px;
-									background-color: #2F3842;
+									background-color: #2DB2A6;
 									opacity: 0;
 								      }
 								      .intro-container-visible {
@@ -67,7 +67,7 @@ layout: landing
 				<!-- One -->
 					<section id="one" class="wrapper style1 special">
 						<div class="inner">
-							<div class="intro_div">
+							<div class="intro-container">
 							<header class="major">
 								<h2>Introduction</h2>
 								<p>Devin has ~7,000 tweets from 2012 - 2018 (6 years). This project analyzes all ~7,000 tweets, removing retweets and replies. 
@@ -109,6 +109,23 @@ layout: landing
 								    graphContainer.className = 'graph-container graph-container-visible';
 								  } else {
 								    // graphContainer.className = 'graph-container';
+								  }
+								});
+							      };
+							      window.onscroll();
+								    
+								    
+							      window.onscroll = function() {
+								var viewportHeight = window.innerHeight;
+								var introContainers = document.querySelectorAll('.intro-container');
+								introContainers.forEach(function(introContainer) {
+								  var bounds = introContainer.getBoundingClientRect();
+								  var middle = bounds.top + (bounds.height / 2)
+								  var middleInViewport = middle > 0 && middle < viewportHeight;
+								  if (middleInViewport) {
+								    introContainer.className = 'intro-container intro-container-visible';
+								  } else {
+								    // introContainer.className = 'intro-container';
 								  }
 								});
 							      };
