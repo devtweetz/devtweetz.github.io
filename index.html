@@ -103,7 +103,7 @@ layout: landing
 					<section id="two" class="wrapper alt style2">
 						<header class="major">
 							<div class="inner"><div class="graph-container" style="background-color: #2F3842">	
-							<br><br><center><h2>Tweet Language Comparison - Unigram</h2></center>
+							<br><center><h2>Tweet Language Comparison - Unigram</h2></center>
 							<p>
 							<html>
 							  <head>
@@ -163,33 +163,6 @@ layout: landing
 								 ['Bill Gates',            1],
 								 ['Kim Kardashian',        1],
 								]);
-								      
-								var bigram = new google.visualization.DataTable();
-								bigram.addColumn('string', 'Tweeter');
-								bigram.addColumn('number', 'Num Similar Tweets');
-								bigram.addRows([
-								 ['Justin Bieber',       738],
-								 ['Oprah',              627],
-								 ['Elon Musk',           396],
-								 ['Barack Obama',        255],
-								 ['King James',          150],
-								 ['Typical Girl',         66],
-								 ['Tyler the Creator',     29],
-								 ['Swift On Security',     20],
-								 ['Britney Spears',       17],
-								 ['Katy Perry',           11],
-								 ['Chrissy Teigen',       11],
-								 ['Gary Vaynerchuk',       6],
-								 ['Justin Timberlake',     6],
-								 ['Selena Gomez',          4],
-								 ['Mia Khalifa',           2],
-								 ['Lady Gaga',             1],
-								 ['Bill Gates',            1],
-								 ['Kim Kardashian',        1],
-								]);
-								      
-
-								     
 
 								// Set chart options
 								var options = {'title': 'Who does Devin tweet like the most?',
@@ -238,14 +211,89 @@ layout: landing
 							<div class="content">
 								<div class="graph-container" style="background-color: 'transparent'; width: 1000px; height: 400px">	
 								<h2>Tweet Language Comparison - Bigram</h2>
-								<p>unigram_chart.draw(unigram, options);</p>
-							</div>
-								</div>
-							<body>
+									<html>
+							  <head>
+							    <script type="text/javascript">
+
+							// Load the Visualization API and the corechart package.
+							      google.charts.load('current', {'packages':['corechart']});
+
+							      // Set a callback to run when the Google Visualization API is loaded.
+							      google.charts.setOnLoadCallback(drawChart);
+
+							      // Callback that creates and populates a data table,
+							      // instantiates the pie chart, passes in the data and
+							      // draws it.
+							      function drawChart() {
+
+								// Create the data table.
+								var unigram = new google.visualization.DataTable();
+								unigram.addColumn('string', 'Tweeter');
+								unigram.addColumn('number', 'Num Similar Tweets');
+								unigram.addRows([
+								 ['Justin Bieber',       738],
+								 ['Oprah',              627],
+								 ['Elon Musk',           396],
+								 ['Barack Obama',        255],
+								 ['King James',          150],
+								 ['Typical Girl',         66],
+								 ['Tyler the Creator',     29],
+								 ['Swift On Security',     20],
+								 ['Britney Spears',       17],
+								 ['Katy Perry',           11],
+								 ['Chrissy Teigen',       11],
+								 ['Gary Vaynerchuk',       6],
+								 ['Justin Timberlake',     6],
+								 ['Selena Gomez',          4],
+								 ['Mia Khalifa',           2],
+								 ['Lady Gaga',             1],
+								 ['Bill Gates',            1],
+								 ['Kim Kardashian',        1],
+								]);
+
+								// Set chart options
+								var options = {'title': 'Who does Devin tweet like the most?',
+									       'width':1000,
+									       'height':400,
+									       'backgroundColor': 'transparent',
+									       'is3D':true,
+									       colors: ['#21b2a6', '#ffffff'],
+										     /*animation:{
+											startup: true,
+											duration: 1000,
+											easing: 'out'
+										     },*/
+									       vAxis: {
+											textStyle: {color: 'white'}
+									       },
+									       hAxis: {
+											textStyle: {color: 'white'}
+									       },
+									       legend: {
+											textStyle: {color: 'white'}
+									       },
+									       titleTextStyle: {
+											color: 'white'
+									       },
+									      };
+
+								// Instantiate and draw our chart, passing in some options.
+								var bigram_chart = new google.visualization.ColumnChart(document.getElementById('bigram_div'));
+
+								bigram_chart.draw(unigram, options);
+							      }
+								  </script>
+							  </head>
+
+							  <body>
 							    <!--Div that will hold the bar chart-->
-   							<div id="chart_div" class="graph-container" style="background-color: 'transparent'; width: 1000px; height:400px"></div>
+   							<div id="bigram_div" class="graph-container" style="background-color: 'transparent'; width: 1000px; height:400px"></div>
  
 							  </body>
+							</html>
+							</p>
+							</div>
+								</div>
 						</section>
 						<section class="spotlight">
 							<div class="content">
