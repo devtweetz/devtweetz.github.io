@@ -17,6 +17,16 @@ layout: landing
 									background-color: #2F3842;
 									opacity: 0;
 								      }
+																		
+								      .graph-container-small {
+									margin: 0 auto;
+									padding: 0;
+									border: 0;
+									width: 1000px;
+									height: 100px;
+									background-color: #2F3842;
+									opacity: 0;
+								      }
 								      .graph-container-visible {
 									opacity: 1;
 									animation-name: scrollin;
@@ -107,7 +117,7 @@ layout: landing
 								  var middle = bounds.top + (bounds.height / 2)
 								  var middleInViewport = middle > 0 && middle < viewportHeight;
 								  if (middleInViewport) {
-								    graphContainer.className = 'graph-container graph-container-visible';
+								    graphContainer.className = 'graph-container graph-container-small graph-container-visible';
 								  } else {
 								    // graphContainer.className = 'graph-container';
 								  }
