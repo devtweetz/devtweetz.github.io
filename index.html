@@ -7,6 +7,7 @@ layout: landing
 								      body {
 									margin: 16px;
 								      }
+									
 								      .graph-container {
 									margin: 0 auto;
 									padding: 0;
@@ -17,6 +18,20 @@ layout: landing
 									opacity: 0;
 								      }
 								      .graph-container-visible {
+									opacity: 1;
+									animation-name: scrollin;
+									animation-duration: 3s;
+								      }
+									.intro-container {
+									margin: 0 auto;
+									padding: 0;
+									border: 0;
+									width: 1000px;
+									height: 400px;
+									background-color: #2DB2A6;
+									opacity: 0;
+								      }
+								      .intro-container-visible {
 									opacity: 1;
 									animation-name: scrollin;
 									animation-duration: 3s;
@@ -52,7 +67,7 @@ layout: landing
 				<!-- One -->
 					<section id="one" class="wrapper style1 special">
 						<div class="inner">
-							<div class="graph-container">
+							<div class="intro-container">
 							<header class="major">
 								<h2>Introduction</h2>
 								<p>Devin has ~7,000 tweets from 2012 - 2018 (6 years). This project analyzes all ~7,000 tweets, removing retweets and replies. 
