@@ -209,6 +209,11 @@ $baseurl: '{{ site.baseurl }}/images';
 		text-align: right;
 	}
 
+//Animation
+.animation.animate {
+    animation: pulse 5s infinite;
+}
+
 /* Section/Article */
 
 	section, article {
