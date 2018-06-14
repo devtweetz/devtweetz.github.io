@@ -103,7 +103,7 @@ layout: landing
 		      };
 
         // Instantiate and draw our chart, passing in some options.
-	var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+	//var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
 	 
 	
 	function isScrolledIntoView(elem)
@@ -121,14 +121,14 @@ layout: landing
     	if (isScrolledIntoView('#canvas')) {
         	if (inView) { return; }
         	inView = true;
-        	chart.draw(data, options);
+        	var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
     	} else {
         	inView = false;  
     	}
 	});
 	
 	      
-	//chart.draw(data, options);
+	chart.draw(data, options);
       }
     </script>
   </head>
