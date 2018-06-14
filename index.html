@@ -76,7 +76,7 @@ layout: landing
 
 				<!-- One -->
 					<section id="one" class="wrapper style1 special">
-						<div class="inner">
+						<div class="graph-container" style="background-color:#2DB2A6"><div class="inner">
 							<header class="major">
 								<h2>Introduction</h2>
 								<p>Devin has ~7,000 tweets from 2012 - 2018 (6 years). This project analyzes all ~7,000 tweets, removing retweets and replies. 
@@ -90,7 +90,7 @@ layout: landing
 								<li><span class="icon fa-link major style2"><span class="label">Markov</span></span></li>
 								<li><span class="icon fa-code major style3"><span class="label">Python</span></span></li>
 							</ul>
-							</div>
+							</div></div>
 					
 							</section>
 
@@ -100,8 +100,8 @@ layout: landing
 						<header class="major">
 							<div class="inner">
 								
-									<br><br><center><h2>Tweet Language Comparison</h2></center>
-								<p>
+							<br><br><center><h2>Tweet Language Comparison</h2></center>
+							<p>
 							<html>
 							  <head>
 							    <!--Load the AJAX API-->
@@ -124,24 +124,6 @@ layout: landing
 								});
 							      };
 							      window.onscroll();
-								    
-							
-// 							      window.onscroll = function() {
-// 								var viewportHeight = window.innerHeight;
-// 								var introContainers = document.querySelectorAll('.intro-container');
-// 								introContainers.forEach(function(introContainer) {
-// 								  var bounds = introContainer.getBoundingClientRect();
-// 								  var middle = bounds.top + (bounds.height / 2)
-// 								  var middleInViewport = middle > 0 && middle < viewportHeight;
-// 								  if (middleInViewport) {
-// 								    introContainer.className = 'intro-container intro-container-visible';
-// 								  } else {
-// 								    // introContainer.className = 'intro-container';
-// 								  }
-// 								});
-// 							      };
-// 							      window.onscroll();
-								    
 
 							// Load the Visualization API and the corechart package.
 							      google.charts.load('current', {'packages':['corechart']});
