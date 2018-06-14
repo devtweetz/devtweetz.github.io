@@ -115,9 +115,11 @@ layout: landing
 									       'backgroundColor': 'transparent',
 									       'is3D':true,
 									       colors: ['#21b2a6', '#ffffff'],
-										     //animation:{
-											//startup: true,
-										     //},
+										     animation:{
+											startup: true,
+											duration: 1000,
+											easing: 'out'
+										     },
 									       vAxis: {
 											textStyle: {color: 'white'}
 									       },
@@ -140,7 +142,7 @@ layout: landing
 								  var middle = bounds.top + (bounds.height / 2)
 								  var middleInViewport = middle > 0 && middle < viewportHeight;
 								  if (middleInViewport) {
-								    //chart.draw(data, options);
+								    chart.draw(data, options);
 								    graphContainer.className = 'graph-container graph-container-visible';
 								  } else {
 								    // graphContainer.className = 'graph-container';
@@ -152,7 +154,7 @@ layout: landing
 								// Instantiate and draw our chart, passing in some options.
 								//var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
 
-								chart.draw(data, options);
+								//chart.draw(data, options);
 							      }
 								  </script>
 							  </head>
@@ -193,33 +195,33 @@ layout: landing
 							<ul class="features">
 								<li class="icon fa-twitter">
 									<h3>Romance</h3>
-									<p>"of course right when i saw u hitting on a final to pass the class 
-										instead of studying ur the most beautiful person 2 me~"</p>
+									<p>of course right when i saw u hitting on a final to pass the class 
+										instead of studying ur the most beautiful person 2 me~</p>
 								</li>
 								<li class="icon fa-twitter">
 									<h3>Water Vehicles</h3>
-									<p>"idiot if you mix it with water. i tried calling an uber off a yacht"</p>
+									<p>idiot if you mix it with water. i tried calling an uber off a yacht</p>
 								</li>
 								<li class="icon fa-twitter">
 									<h3>Relatable</h3>
-									<p>"yo i relate to how k selected organisms are iteroparous really it's fine 
-										you can be a blues fan today"</p>
+									<p>yo i relate to how k selected organisms are iteroparous really it's fine 
+										you can be a blues fan today</p>
 								</li>
 								<li class="icon fa-twitter">
 									<h3>Dreamer</h3>
-									<p>"most people have dreams of them flying or travelling, etc. 
+									<p>most people have dreams of them flying or travelling, etc. 
 										i dream about the person who set my phone alarm to 4:45 without me noticing...
-										alright that was so trippy"</p>
+										alright that was so trippy</p>
 								</li>
 								<li class="icon fa-twitter">
 									<h3>Mortal Kombat > Friendships</h3>
-									<p>"kinda feels like i'm not ignoring u, 
-										i'm just tryna play mortal kombat"</p>
+									<p>kinda feels like i'm not ignoring u, 
+										i'm just tryna play mortal kombat</p>
 								</li>
 								<li class="icon fa-twitter">
 									<h3>????</h3>
-									<p>"your needle made everyone else's 
-										needle look like chaz bono"</p>
+									<p>your needle made everyone else's 
+										needle look like chaz bono</p>
 								</li>
 							</ul>
 						</div>
