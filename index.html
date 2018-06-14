@@ -43,26 +43,22 @@ layout: landing
     <script src="jquery-3.3.1.min.js"></script>
     <script src="ScrollTrigger.min.js"></script>
 
-    <script type="text/javascript">
 	 
-	    
-	var inView = false;
-
+<script>
+	window.counter = function() {
+		// this refers to the html element with the data-scroll-showCallback tag
+		var span = this.querySelector('span');
+		var current = parseInt(span.textContent);
+		span.textContent = current + 1;
+	};
 	document.addEventListener('DOMContentLoaded', function(){
 	  var trigger = new ScrollTrigger({
-	    toggle: {
-	      visible: 'visibleClass',
-	      hidden: 'hiddenClass'
-	    },
-	    offset: {
-	      x: 0,
-	      y: 20
-	    },
-	    addHeight: true,
-	    once: true
-	  }, document.body, window);
+		  addHeight: true
+	  });
 	});
-
+</script>
+	  
+<script type="text/javascript">
 
       // Load the Visualization API and the corechart package.
       google.charts.load('current', {'packages':['corechart']});
