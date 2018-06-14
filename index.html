@@ -34,11 +34,11 @@ layout: landing
 					<section id="two" class="wrapper alt style2">
 						<header class="major">
 							<div class="inner">
-								<center><h2>Tweet Language Comparison</h2>
+								<h2>Tweet Language Comparison</h2>
 								<p>
 							<html>
 							  <head>
-								   <style>
+								<style>
 								      body {
 									margin: 16px;
 								      }
@@ -46,14 +46,31 @@ layout: landing
 									margin: 16px;
 									padding: 0;
 									border: 0;
-									width: 1000px;
-									height: 400px;
-									background-color: #2F3842;
-									z-index: 1
+									width: 200px;
+									height: 200px;
+									background-color: #81a2be;
+									opacity: 0;
 								      }
 								      .graph-container-visible {
-									z-index: 1
-									background-color: transparent !important;
+									opacity: 1;
+									animation-name: scrollin;
+									animation-duration: 3s;
+								      }
+								      @keyframes scrollin {
+									from {
+									  opacity: 0;
+									}
+									to {
+									  opacity: 1;
+									}
+								      }
+								      @keyframes scrollout {
+									from {
+									  opacity: 1;
+									}
+									to {
+									  opacity: 0;
+									}
 								      }
 								    </style>
 							    <!--Load the AJAX API-->
@@ -63,19 +80,15 @@ layout: landing
 							// Scroll check
 							      window.onscroll = function() {
 								var viewportHeight = window.innerHeight;
-
 								var graphContainers = document.querySelectorAll('.graph-container');
-
 								graphContainers.forEach(function(graphContainer) {
 								  var bounds = graphContainer.getBoundingClientRect();
 								  var middle = bounds.top + (bounds.height / 2)
-
 								  var middleInViewport = middle > 0 && middle < viewportHeight;
-
 								  if (middleInViewport) {
 								    graphContainer.className = 'graph-container graph-container-visible';
 								  } else {
-								    graphContainer.className = 'graph-container';
+								    // graphContainer.className = 'graph-container';
 								  }
 								});
 							      };
@@ -141,7 +154,7 @@ layout: landing
 
 								chart.draw(data, options);
 							      }
-								  </script></center>
+								  </script>
 							  </head>
 
 							  <body>
