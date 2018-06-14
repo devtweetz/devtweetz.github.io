@@ -116,21 +116,21 @@ layout: landing
 							      window.onscroll();
 								    
 							
-							      window.onscroll = function() {
-								var viewportHeight = window.innerHeight;
-								var introContainers = document.querySelectorAll('.intro-container');
-								introContainers.forEach(function(introContainer) {
-								  var bounds = introContainer.getBoundingClientRect();
-								  var middle = bounds.top + (bounds.height / 2)
-								  var middleInViewport = middle > 0 && middle < viewportHeight;
-								  if (middleInViewport) {
-								    introContainer.className = 'intro-container intro-container-visible';
-								  } else {
-								    // introContainer.className = 'intro-container';
-								  }
-								});
-							      };
-							      window.onscroll();
+// 							      window.onscroll = function() {
+// 								var viewportHeight = window.innerHeight;
+// 								var introContainers = document.querySelectorAll('.intro-container');
+// 								introContainers.forEach(function(introContainer) {
+// 								  var bounds = introContainer.getBoundingClientRect();
+// 								  var middle = bounds.top + (bounds.height / 2)
+// 								  var middleInViewport = middle > 0 && middle < viewportHeight;
+// 								  if (middleInViewport) {
+// 								    introContainer.className = 'intro-container intro-container-visible';
+// 								  } else {
+// 								    // introContainer.className = 'intro-container';
+// 								  }
+// 								});
+// 							      };
+// 							      window.onscroll();
 								    
 
 							// Load the Visualization API and the corechart package.
