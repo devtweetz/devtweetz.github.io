@@ -89,7 +89,8 @@ layout: landing
 					<section id="two" class="wrapper alt style2">
 						<header class="major">
 							<div class="inner">
-								<center><h2>Tweet Language Comparison</h2></center>
+								<div class="graph-container">
+									<center><h2>Tweet Language Comparison</h2></center></div>
 								<p>
 							<html>
 							  <head>
@@ -114,7 +115,7 @@ layout: landing
 							      };
 							      window.onscroll();
 								    
-								    
+							
 							      window.onscroll = function() {
 								var viewportHeight = window.innerHeight;
 								var introContainers = document.querySelectorAll('.intro-container');
@@ -130,6 +131,7 @@ layout: landing
 								});
 							      };
 							      window.onscroll();
+								    
 
 							// Load the Visualization API and the corechart package.
 							      google.charts.load('current', {'packages':['corechart']});
