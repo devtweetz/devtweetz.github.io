@@ -77,28 +77,13 @@ layout: landing
 							    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 							    <script type="text/javascript">
 							
-							// Scroll check
-							      window.onscroll = function() {
-								var viewportHeight = window.innerHeight;
-								var graphContainers = document.querySelectorAll('.graph-container');
-								graphContainers.forEach(function(graphContainer) {
-								  var bounds = graphContainer.getBoundingClientRect();
-								  var middle = bounds.top + (bounds.height / 2)
-								  var middleInViewport = middle > 0 && middle < viewportHeight;
-								  if (middleInViewport) {
-								    graphContainer.className = 'graph-container graph-container-visible';
-								  } else {
-								    // graphContainer.className = 'graph-container';
-								  }
-								});
-							      };
-							      window.onscroll();
 
 							// Load the Visualization API and the corechart package.
 							      google.charts.load('current', {'packages':['corechart']});
 
 							      // Set a callback to run when the Google Visualization API is loaded.
 							      google.charts.setOnLoadCallback(drawChart);
+							      var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
 
 							      // Callback that creates and populates a data table,
 							      // instantiates the pie chart, passes in the data and
@@ -148,11 +133,28 @@ layout: landing
 											color: 'white'
 									       },
 									      };
+							// Scroll check
+							      window.onscroll = function() {
+								var viewportHeight = window.innerHeight;
+								var graphContainers = document.querySelectorAll('.graph-container');
+								graphContainers.forEach(function(graphContainer) {
+								  var bounds = graphContainer.getBoundingClientRect();
+								  var middle = bounds.top + (bounds.height / 2)
+								  var middleInViewport = middle > 0 && middle < viewportHeight;
+								  if (middleInViewport) {
+								    chart.draw(data, options);
+								    graphContainer.className = 'graph-container graph-container-visible';
+								  } else {
+								    // graphContainer.className = 'graph-container';
+								  }
+								});
+							      };
+							      window.onscroll();
 
 								// Instantiate and draw our chart, passing in some options.
-								var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+								//var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
 
-								chart.draw(data, options);
+								//chart.draw(data, options);
 							      }
 								  </script>
 							  </head>
