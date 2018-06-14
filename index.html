@@ -140,10 +140,10 @@ layout: landing
 							      function drawChart() {
 
 								// Create the data table.
-								var data = new google.visualization.DataTable();
-								data.addColumn('string', 'Tweeter');
-								data.addColumn('number', 'Num Similar Tweets');
-								data.addRows([
+								var unigram = new google.visualization.DataTable();
+								unigram.addColumn('string', 'Tweeter');
+								unigram.addColumn('number', 'Num Similar Tweets');
+								unigram.addRows([
 								 ['Justin Bieber',       738],
 								 ['Oprah',              627],
 								 ['Elon Musk',           396],
@@ -162,6 +162,54 @@ layout: landing
 								 ['Lady Gaga',             1],
 								 ['Bill Gates',            1],
 								 ['Kim Kardashian',        1],
+								]);
+								      
+								var bigram = new google.visualization.DataTable();
+								bigram.addColumn('string', 'Tweeter');
+								bigram.addColumn('number', 'Num Similar Tweets');
+								bigram.addRows([
+								 ['Justin Bieber',       738],
+								 ['Oprah',              627],
+								 ['Elon Musk',           396],
+								 ['Barack Obama',        255],
+								 ['King James',          150],
+								 ['Typical Girl',         66],
+								 ['Tyler the Creator',     29],
+								 ['Swift On Security',     20],
+								 ['Britney Spears',       17],
+								 ['Katy Perry',           11],
+								 ['Chrissy Teigen',       11],
+								 ['Gary Vaynerchuk',       6],
+								 ['Justin Timberlake',     6],
+								 ['Selena Gomez',          4],
+								 ['Mia Khalifa',           2],
+								 ['Lady Gaga',             1],
+								 ['Bill Gates',            1],
+								 ['Kim Kardashian',        1],
+								]);
+								      
+								var both = new google.visualization.DataTable();
+								both.addColumn('string', 'Tweeter');
+								both.addColumn('number', 'Num Similar Tweets');
+								both.addRows([
+									['GordonRamsay',       1525
+									['BarackObama',         489
+									BillGates',           193
+									Oprah',               112
+									KingJames',           57
+									garyvee',              51
+									justinbieber',         39
+									elonmusk',             24
+									KimKardashian',        17
+									SwiftOnSecurity',      12
+									ladygaga',             12
+									miakhalifa',            9
+									barstoolsports',        5
+									selenagomez',           5
+									jtimberlake',           4
+									TypicalGirI',           3
+									britneyspears',         2
+									chrissyteigen',         2
 								]);
 								     
 
@@ -192,9 +240,9 @@ layout: landing
 									      };
 
 								// Instantiate and draw our chart, passing in some options.
-								var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+								var unigram_chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
 
-								chart.draw(data, options);
+								unigram_chart.draw(unigram, options);
 							      }
 								  </script>
 							  </head>
@@ -212,15 +260,20 @@ layout: landing
 							<div class="content">
 								<div class="graph-container" style="background-color: 'transparent'; width: 1000px; height: 400px">	
 								<h2>Tweet Language Comparison - Bigram</h2>
-								<p>Some data about meee</p>
+								<p>unigram_chart.draw(unigram, options);</p>
 							</div>
 								</div>
+							<body>
+							    <!--Div that will hold the bar chart-->
+   							<div id="chart_div" class="graph-container" style="background-color: 'transparent'; width: 1000px; height:400px"></div>
+ 
+							  </body>
 						</section>
 						<section class="spotlight">
 							<div class="content">
 								<div class="graph-container" style="background-color: 'transparent'; width: 1000px; height: 400px">
 								<h2>Tweet Language Comparison - Unigram & Bigram</h2>
-								<p>Some data about meee</p>
+								<p>unigram_chart.draw(unigram, options);</p>
 							</div>
 								</div>
 						</section>
