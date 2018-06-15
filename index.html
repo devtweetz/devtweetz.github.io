@@ -392,10 +392,10 @@ layout: landing
 							      function drawChart() {
 
 								// Create the data table.
-								var both = new google.visualization.DataTable();
-								both.addColumn('string', 'Tweeter');
-								both.addColumn('number', 'Num Similar Tweets');
-								both.addRows([
+								var both2013 = new google.visualization.DataTable();
+								both2013.addColumn('string', 'Tweeter');
+								both2013.addColumn('number', 'Num Similar Tweets');
+								both2013.addRows([
 									['Oprah',              327],
 									['justinbieber',       201],
 									['elonmusk',           152],
@@ -414,9 +414,22 @@ layout: landing
 									['miakhalifa',     1],
 									['SwiftOnSecurity',     1],
 								]);
+								      
+								 var both2016 = new google.visualization.DataTable();
+								both2016.addColumn('string', 'Tweeter');
+								both2016.addColumn('number', 'Num Similar Tweets');
+								both2016.addRows([
+									["justinbieber",     34],
+									["BarackObama"      23],
+									["KimKardashian"     8],
+									["elonmusk"          5],
+									["TypicalGirI"       2],
+									["KingJames"         1],
+									["ladygaga"          1],
+								]);
 
 								// Set chart options
-								var options = {'title': 'Who does Devin tweet like the most - 2013?',
+								var options = {'title': 'Who does Devin tweet like the most?',
 									       'width':1000,
 									       'height':400,
 									       'backgroundColor': 'transparent',
@@ -442,9 +455,10 @@ layout: landing
 									      };
 
 								// Instantiate and draw our chart, passing in some options.
-								var both_chart = new google.visualization.ColumnChart(document.getElementById('2013_div'));
-
-								both_chart.draw(both, options);
+								var both_chart2013 = new google.visualization.ColumnChart(document.getElementById('2013_div'));
+q								var both_chart2016 = new google.visualization.ColumnChart(document.getElementById('2016_div'));
+								both_chart2013.draw(both2013, options);
+								both_chart2016.draw(both2016, options);
 							      }
 								  </script>
 							  </head>
@@ -452,7 +466,7 @@ layout: landing
 							  <body>
 							    <!--Div that will hold the bar chart-->
    							<div id="2013_div" class="graph-container" style="background-color: 'transparent'"></div>
- 
+							 <div id="2016_div" class="graph-container" style="background-color: 'transparent'"></div>
 							</body>
 							</html>
 							</p>
