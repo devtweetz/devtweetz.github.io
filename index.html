@@ -414,6 +414,19 @@ layout: landing
 									['miakhalifa',     1],
 									['SwiftOnSecurity',     1],
 								]);
+								      
+								var both2016 = new google.visualization.DataTable();
+								both2016.addColumn('string', 'Tweeter');
+								both2016.addColumn('number', 'Num Similar Tweets');
+								both2016.addRows([
+									['justinbieber',     34],
+									['BarackObama',      23],
+									['KimKardashian',     8],
+									['elonmusk',          5],
+									['TypicalGirl',       2],
+									['KingJames',         1],
+									['ladygaga',          1],
+								]);
 								     
 
 								// Set chart options
@@ -442,16 +455,44 @@ layout: landing
 									       },
 									      };
 
+								      
+								      	var options2 = {'title': 'Who does Devin tweet like the most? - 2016',
+									       'width':1000,
+									       'height':400,
+									       'backgroundColor': 'transparent',
+									       'is3D':true,
+									       colors: ['#21b2a6', '#ffffff'],
+										     /*animation:{
+											startup: true,
+											duration: 1000,
+											easing: 'out'
+										     },*/
+									       vAxis: {
+											textStyle: {color: 'white'}
+									       },
+									       hAxis: {
+											textStyle: {color: 'white'}
+									       },
+									       legend: {
+											textStyle: {color: 'white'}
+									       },
+									       titleTextStyle: {
+											color: 'white'
+									       },
+									      };
 								// Instantiate and draw our chart, passing in some options.
 								var both_chart2013 = new google.visualization.ColumnChart(document.getElementById('2013_div'));
+								var both_chart2016 = new google.visualization.ColumnChart(document.getElementById('2016_div'));
 								both_chart2013.draw(both2013, options);
+								both_chart2016.draw(both2016, options2);
 							      }
 								  </script>
 							  </head>
 
 							  <body>
-							    <!--Div that will hold the bar chart-->
+							    
    							<div id="2013_div" class="graph-container" style="background-color: 'transparent'"></div>
+							<div id="2016_div" class="graph-container" style="background-color: 'transparent'"></div>
 							</body>
 							</html>
 							</p>
