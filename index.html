@@ -372,14 +372,93 @@ layout: landing
 							</div>
 								</div>
 						</section><br>
-						<section class="spotlight">
-							<div class="content">
+					<section id="five" class="wrapper alt style2">
+							<div class="inner">
 								<div class="graph-container" style="background-color: 'transparent'">
-								<h2>Tweet Language Change 2013 - 2018</h2>
-								<p>Some data about meee</p>
+								<br><h2>Tweet Language 2013-2018</h2>
+							<p><html>
+							  <head>
+							    <script type="text/javascript">
+
+							// Load the Visualization API and the corechart package.
+							      google.charts.load('current', {'packages':['corechart']});
+
+							      // Set a callback to run when the Google Visualization API is loaded.
+							      google.charts.setOnLoadCallback(drawChart);
+
+							      // Callback that creates and populates a data table,
+							      // instantiates the pie chart, passes in the data and
+							      // draws it.
+							      function drawChart() {
+
+								// Create the data table.
+								var both = new google.visualization.DataTable();
+								both.addColumn('string', 'Tweeter');
+								both.addColumn('number', 'Num Similar Tweets');
+								both.addRows([
+									['Oprah',              327],
+									['justinbieber',       201],
+									['elonmusk',           152],
+									['TypicalGirl',         35],
+									['KingJames',           31],
+									['tylerthecreator',     19],
+									['BarackObama',          8],
+									['chrissyteigen',        7],
+									['selenagomez',          6],
+									['britneyspears',        4],
+									['jtimberlake',          4],
+									['ladygaga',             2],
+									['katyperry',            2],
+									['KimKardashian',        2],
+									['garyvee',              1],
+									['miakhalifa',     1],
+									['SwiftOnSecurity',     1],
+								]);
+
+								// Set chart options
+								var options = {'title': 'Who does Devin tweet like the most - 2013?',
+									       'width':1000,
+									       'height':400,
+									       'backgroundColor': 'transparent',
+									       'is3D':true,
+									       colors: ['#21b2a6', '#ffffff'],
+										     /*animation:{
+											startup: true,
+											duration: 1000,
+											easing: 'out'
+										     },*/
+									       vAxis: {
+											textStyle: {color: 'white'}
+									       },
+									       hAxis: {
+											textStyle: {color: 'white'}
+									       },
+									       legend: {
+											textStyle: {color: 'white'}
+									       },
+									       titleTextStyle: {
+											color: 'white'
+									       },
+									      };
+
+								// Instantiate and draw our chart, passing in some options.
+								var both_chart = new google.visualization.ColumnChart(document.getElementById('both_div'));
+
+								both_chart.draw(both, options);
+							      }
+								  </script>
+							  </head>
+
+							  <body>
+							    <!--Div that will hold the bar chart-->
+   							<div id="both_div" class="graph-container" style="background-color: 'transparent'"></div>
+ 
+							</body>
+							</html>
+							</p>
 							</div>
-						</section>
-					</section>
+								</div>
+						</section><br>
 						
 						
 
