@@ -416,6 +416,41 @@ layout: landing
 									['SwiftOnSecurity',     1],
 								]);
 								      
+								var both2014 = new google.visualization.DataTable();							var both2013 = new google.visualization.DataTable();
+								both2014.addColumn('string', 'Tweeter');
+								both2014.addColumn('number', 'Num Similar Tweets');
+								both2014.addRows([
+									["KingJames",          252],
+									["justinbieber",       185],
+									["Oprah",              111],
+									["elonmusk",           91],
+									["TypicalGirI",         24],
+									["britneyspears",        9],
+									["tylerthecreator",      8],
+									["chrissyteigen",        4],
+									["jtimberlake",          4],
+									["BarackObama",          3],
+									["garyvee",             3],
+									["ladygaga",             2],
+									["KimKardashian",        1],
+									["SwiftOnSecurity",      1],
+								]);
+								      								      
+								var both2015 = new google.visualization.DataTable();							var both2013 = new google.visualization.DataTable();
+								both2015.addColumn('string', 'Tweeter');
+								both2015.addColumn('number', 'Num Similar Tweets');
+								both2015.addRows([
+									["justinbieber",       202],
+									["BarackObama",        132],
+									["Oprah",               88],
+									["elonmusk",            73],
+									["KingJames",           69],
+									["ladygaga",             4],
+									["britneyspears",        3],
+									["SwiftOnSecurity",      2],
+								]);
+								      
+								      
 								var both2016 = new google.visualization.DataTable();
 								both2016.addColumn('string', 'Tweeter');
 								both2016.addColumn('number', 'Num Similar Tweets');
@@ -428,10 +463,65 @@ layout: landing
 									['KingJames',         1],
 									['ladygaga',          1],
 								]);
+								      
+								      								      
+								var both2017 = new google.visualization.DataTable();							var both2013 = new google.visualization.DataTable();
+								both2017.addColumn('string', 'Tweeter');
+								both2017.addColumn('number', 'Num Similar Tweets');
+								both2017.addRows([
+									["BarackObama",        39],
+									["justinbieber",       37],
+									["elonmusk",           11],
+									["BillGates",           9],
+									["KimKardashian",       5],
+									["Oprah",               5],
+									["ladygaga",           3],
+									["SwiftOnSecurity",     1],
+								]);
+								      								      								      
+								var both2018 = new google.visualization.DataTable();							var both2013 = new google.visualization.DataTable();
+								both2018.addColumn('string', 'Tweeter');
+								both2018.addColumn('number', 'Num Similar Tweets');
+								both2018.addRows([
+									["justinbieber",     27],
+									["BarackObama",      25],
+									["elonmusk",         11],
+									["BillGates",        10],
+									["GordonRamsay",      3],
+									["ladygaga",          3],
+									["Oprah",             2],
+									["KimKardashian",     1],
+									["TypicalGirl",       1],
+								]);
 								     
 
 								// Set chart options
-								var options = {'title': 'Who does Devin tweet like the most?',
+								var options2013 = {'title': 'Who does Devin tweet like the most? - 2013',
+									       'width':1000,
+									       'height':400,
+									       'backgroundColor': 'transparent',
+									       'is3D':true,
+									       colors: ['#21b2a6', '#ffffff'],
+										     /*animation:{
+											startup: true,
+											duration: 1000,
+											easing: 'out'
+										     },*/
+									       vAxis: {
+											textStyle: {color: 'white'}
+									       },
+									       hAxis: {
+											textStyle: {color: 'white'}
+									       },
+									       legend: {
+											textStyle: {color: 'white'}
+									       },
+									       titleTextStyle: {
+											color: 'white'
+									       },
+									      };
+								      
+								      	var options2014 = {'title': 'Who does Devin tweet like the most? - 2014',
 									       'width':1000,
 									       'height':400,
 									       'backgroundColor': 'transparent',
@@ -456,8 +546,83 @@ layout: landing
 									       },
 									      };
 
+								      								      
+								      	var options2015 = {'title': 'Who does Devin tweet like the most? - 2015',
+									       'width':1000,
+									       'height':400,
+									       'backgroundColor': 'transparent',
+									       'is3D':true,
+									       colors: ['#21b2a6', '#ffffff'],
+										     /*animation:{
+											startup: true,
+											duration: 1000,
+											easing: 'out'
+										     },*/
+									       vAxis: {
+											textStyle: {color: 'white'}
+									       },
+									       hAxis: {
+											textStyle: {color: 'white'}
+									       },
+									       legend: {
+											textStyle: {color: 'white'}
+									       },
+									       titleTextStyle: {
+											color: 'white'
+									       },
+									      };
 								      
-								      	var options2 = {'title': 'Who does Devin tweet like the most? - 2016',
+								      	var options2016 = {'title': 'Who does Devin tweet like the most? - 2016',
+									       'width':1000,
+									       'height':400,
+									       'backgroundColor': 'transparent',
+									       'is3D':true,
+									       colors: ['#21b2a6', '#ffffff'],
+										     /*animation:{
+											startup: true,
+											duration: 1000,
+											easing: 'out'
+										     },*/
+									       vAxis: {
+											textStyle: {color: 'white'}
+									       },
+									       hAxis: {
+											textStyle: {color: 'white'}
+									       },
+									       legend: {
+											textStyle: {color: 'white'}
+									       },
+									       titleTextStyle: {
+											color: 'white'
+									       },
+									      };
+								     								      
+								      	var options2017 = {'title': 'Who does Devin tweet like the most? - 2014',
+									       'width':1000,
+									       'height':400,
+									       'backgroundColor': 'transparent',
+									       'is3D':true,
+									       colors: ['#21b2a6', '#ffffff'],
+										     /*animation:{
+											startup: true,
+											duration: 1000,
+											easing: 'out'
+										     },*/
+									       vAxis: {
+											textStyle: {color: 'white'}
+									       },
+									       hAxis: {
+											textStyle: {color: 'white'}
+									       },
+									       legend: {
+											textStyle: {color: 'white'}
+									       },
+									       titleTextStyle: {
+											color: 'white'
+									       },
+									      };
+								      								      
+								      	var options2018 = {'title': 'Who does Devin tweet like the most? - 2014',
 									       'width':1000,
 									       'height':400,
 									       'backgroundColor': 'transparent',
@@ -483,9 +648,17 @@ layout: landing
 									      };
 								// Instantiate and draw our chart, passing in some options.
 								var both_chart2013 = new google.visualization.ColumnChart(document.getElementById('2013_div'));
+								var both_chart2014 = new google.visualization.ColumnChart(document.getElementById('2014_div'));	      
+								var both_chart2015 = new google.visualization.ColumnChart(document.getElementById('2015_div'));	      
 								var both_chart2016 = new google.visualization.ColumnChart(document.getElementById('2016_div'));
-								both_chart2013.draw(both2013, options);
-								both_chart2016.draw(both2016, options2);
+								var both_chart2017 = new google.visualization.ColumnChart(document.getElementById('2017_div'));
+								var both_chart2018 = new google.visualization.ColumnChart(document.getElementById('2018_div'));
+								both_chart2013.draw(both2013, options2013);
+								both_chart2014.draw(both2014, options2014);
+								both_chart2015.draw(both2015, options2015);
+								both_chart2016.draw(both2016, options2016);
+								both_chart2017.draw(both2017, options2017);
+								both_chart2018.draw(both2018, options2018);
 							      }
 								  </script>
 							  </head>
