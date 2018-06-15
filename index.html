@@ -376,7 +376,6 @@ layout: landing
 							<div class="inner">
 								<div class="graph-container" style="background-color: 'transparent'">
 								<br><h2>Tweet Language 2013-2018</h2>
-									<br><h3>hi</h3>
 							<p><html>
 							  <head>
 							    <script type="text/javascript">
@@ -420,34 +419,34 @@ layout: landing
 								both2014.addColumn('string', 'Tweeter');
 								both2014.addColumn('number', 'Num Similar Tweets');
 								both2014.addRows([
-									["KingJames",          252],
-									["justinbieber",       185],
-									["Oprah",              111],
-									["elonmusk",           91],
-									["TypicalGirI",         24],
-									["britneyspears",        9],
-									["tylerthecreator",      8],
-									["chrissyteigen",        4],
-									["jtimberlake",          4],
-									["BarackObama",          3],
-									["garyvee",             3],
-									["ladygaga",             2],
-									["KimKardashian",        1],
-									["SwiftOnSecurity",      1],
+									['KingJames',          252],
+									['justinbieber',       185],
+									['Oprah',              111],
+									['elonmusk',           91],
+									['TypicalGirl',         24],
+									['britneyspears',        9],
+									['tylerthecreator',      8],
+									['chrissyteigen',        4],
+									['jtimberlake',          4],
+									['BarackObama',          3],
+									['garyvee',             3],
+									['ladygaga',             2],
+									['KimKardashian',        1],
+									['SwiftOnSecurity',      1],
 								]);
 								      								      
 								var both2015 = new google.visualization.DataTable();							var both2013 = new google.visualization.DataTable();
 								both2015.addColumn('string', 'Tweeter');
 								both2015.addColumn('number', 'Num Similar Tweets');
 								both2015.addRows([
-									["justinbieber",       202],
-									["BarackObama",        132],
-									["Oprah",               88],
-									["elonmusk",            73],
-									["KingJames",           69],
-									["ladygaga",             4],
-									["britneyspears",        3],
-									["SwiftOnSecurity",      2],
+									['justinbieber',       202],
+									['BarackObama',        132],
+									['Oprah',               88],
+									['elonmusk',            73],
+									['KingJames',           69],
+									['ladygaga',             4],
+									['britneyspears',        3],
+									['SwiftOnSecurity',      2],
 								]);
 								      
 								      
@@ -469,29 +468,29 @@ layout: landing
 								both2017.addColumn('string', 'Tweeter');
 								both2017.addColumn('number', 'Num Similar Tweets');
 								both2017.addRows([
-									["BarackObama",        39],
-									["justinbieber",       37],
-									["elonmusk",           11],
-									["BillGates",           9],
-									["KimKardashian",       5],
-									["Oprah",               5],
-									["ladygaga",           3],
-									["SwiftOnSecurity",     1],
+									['BarackObama',        39],
+									['justinbieber',       37],
+									['elonmusk',           11],
+									['BillGates',           9],
+									['KimKardashian',       5],
+									['Oprah',               5],
+									['ladygaga',           3],
+									['SwiftOnSecurity',     1],
 								]);
 								      								      								      
 								var both2018 = new google.visualization.DataTable();							var both2013 = new google.visualization.DataTable();
 								both2018.addColumn('string', 'Tweeter');
 								both2018.addColumn('number', 'Num Similar Tweets');
 								both2018.addRows([
-									["justinbieber",     27],
-									["BarackObama",      25],
-									["elonmusk",         11],
-									["BillGates",        10],
-									["GordonRamsay",      3],
-									["ladygaga",          3],
-									["Oprah",             2],
-									["KimKardashian",     1],
-									["TypicalGirl",       1],
+									['justinbieber',     27],
+									['BarackObama',      25],
+									['elonmusk',         11],
+									['BillGates',        10],
+									['GordonRamsay',      3],
+									['ladygaga',          3],
+									['Oprah',             2],
+									['KimKardashian',     1],
+									['TypicalGirl',       1],
 								]);
 								     
 
@@ -597,7 +596,7 @@ layout: landing
 									       },
 									      };
 								     								      
-								      	var options2017 = {'title': 'Who does Devin tweet like the most? - 2014',
+								      	var options2017 = {'title': 'Who does Devin tweet like the most? - 2017',
 									       'width':1000,
 									       'height':400,
 									       'backgroundColor': 'transparent',
@@ -622,7 +621,7 @@ layout: landing
 									       },
 									      };
 								      								      
-								      	var options2018 = {'title': 'Who does Devin tweet like the most? - 2014',
+								      	var options2018 = {'title': 'Who does Devin tweet like the most? - 2018',
 									       'width':1000,
 									       'height':400,
 									       'backgroundColor': 'transparent',
@@ -646,6 +645,7 @@ layout: landing
 											color: 'white'
 									       },
 									      };
+								      
 								// Instantiate and draw our chart, passing in some options.
 								var both_chart2013 = new google.visualization.ColumnChart(document.getElementById('2013_div'));
 								var both_chart2014 = new google.visualization.ColumnChart(document.getElementById('2014_div'));	      
@@ -653,6 +653,7 @@ layout: landing
 								var both_chart2016 = new google.visualization.ColumnChart(document.getElementById('2016_div'));
 								var both_chart2017 = new google.visualization.ColumnChart(document.getElementById('2017_div'));
 								var both_chart2018 = new google.visualization.ColumnChart(document.getElementById('2018_div'));
+								      
 								both_chart2013.draw(both2013, options2013);
 								both_chart2014.draw(both2014, options2014);
 								both_chart2015.draw(both2015, options2015);
@@ -666,7 +667,11 @@ layout: landing
 							  <body>
 							    
    							<div id="2013_div" class="graph-container" style="background-color: 'transparent'"></div>
-							<div id="2016_div" class="graph-container" style="background-color: 'transparent'"></div>
+							<div id="2014_div" class="graph-container" style="background-color: 'transparent'"></div							
+							<div id="2015_div" class="graph-container" style="background-color: 'transparent'"></div>							
+							<div id="2016_div" class="graph-container" style="background-color: 'transparent'"></div>							
+							<div id="2017_div" class="graph-container" style="background-color: 'transparent'"></div>							
+							<div id="2018_div" class="graph-container" style="background-color: 'transparent'"></div>>
 							</body>
 							</html>
 							</p>
